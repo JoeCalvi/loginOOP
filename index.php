@@ -39,7 +39,7 @@
             <div class="border-start border-info border-3 p-3">
               <h4>Sign Up</h4>
               <p>Don't have an account yet? Sign up here.</p>
-              <form action="" method="post">
+              <form action="signup.inc.php" method="post">
                 <div class="mb-3">
                   <input class="form-control w-100" type="text" name="uid" placeholder="Username">
                 </div>
@@ -60,9 +60,9 @@
           </div>
           <div class="col-6 h-100 d-flex justify-content-start align-items-center">
             <div class="bg-dark text-light rounded p-3">
-              <h4>Login</h4>
+              <h4 class="text-center">Login</h4>
               <p>Already have an account? Log in here.</p>
-              <form action="" method="post">
+              <form action="login.inc.php" method="post">
                 <div class="mb-3">
                   <input class="form-control w-100" type="text" name="uid" placeholder="Username">
                 </div>
