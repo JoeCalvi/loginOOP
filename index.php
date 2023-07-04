@@ -53,7 +53,7 @@
                   <input class="form-control w-100" type="text" name="email" placeholder="Email">
                 </div>
                 <div class="mb-3">
-                  <button class="btn btn-primary" type="submit">Sign Up</button>
+                  <button class="btn btn-primary" name="submit" type="submit">Sign Up</button>
                 </div>
               </form>
             </div>
@@ -70,7 +70,7 @@
                   <input class="form-control w-100" type="password" name="pwd" placeholder="Password">
                 </div>
                 <div class="mb-3 text-center">
-                  <button class="btn btn-primary" type="submit">Login</button>
+                  <button class="btn btn-primary" name="submit" type="submit">Login</button>
                 </div>
               </form>
             </div>
