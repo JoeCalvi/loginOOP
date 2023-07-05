@@ -39,7 +39,7 @@
             <div class="border-start border-info border-3 p-3">
               <h4>Sign Up</h4>
               <p>Don't have an account yet? Sign up here.</p>
-              <form action="signup.inc.php" method="post">
+              <form action="includes/signup.inc.php" method="post">
                 <div class="mb-3">
                   <input class="form-control w-100" type="text" name="uid" placeholder="Username">
                 </div>
@@ -47,7 +47,7 @@
                   <input class="form-control w-100" type="password" name="pwd" placeholder="Password">
                 </div>
                 <div class="mb-3">
-                  <input class="form-control w-100" type="password" name="pwdrepeat" placeholder="Repeat Password">
+                  <input class="form-control w-100" type="password" name="pwdRepeat" placeholder="Repeat Password">
                 </div>
                 <div class="mb-3">
                   <input class="form-control w-100" type="text" name="email" placeholder="Email">

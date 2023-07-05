@@ -41,7 +41,7 @@ class SignupController extends Signup {
   }
 
   private function emptyInput() {
-    $result = true;
+    $result = null;
     
     if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
       $result = false;
@@ -53,7 +53,7 @@ class SignupController extends Signup {
   }
 
   private function invalidUid() {
-    $result = true;
+    $result = null;
     
     if(!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)) {
       $result = false;
@@ -65,7 +65,7 @@ class SignupController extends Signup {
   }
 
   private function invalidEmail() {
-    $result = true;
+    $result = null;
 
     if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
       $result = false;
@@ -77,7 +77,7 @@ class SignupController extends Signup {
   }
 
   private function pwdMatch() {
-    $result = true;
+    $result = null;
 
     if($this->pwd !== $this->pwdRepeat) {
       $result = false;
@@ -89,7 +89,7 @@ class SignupController extends Signup {
   }
 
   private function uidTakenCheck() {
-    $result = true;
+    $result = null;
 
     if(!$this->checkUser($this->uid, $this->email)) {
       $result = false;
