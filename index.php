@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +18,27 @@
         <div class="d-flex w-100 justify-content-between align-items-center">
           <a class="navbar-brand text-light" href="https://github.com/JoeCalvi">Joe Calvi</a>
           <h4 class="text-light">Basic Login System</h4>
-          <div div class="d-flex gap-2">
-            <button class="btn btn-outline-light">Login</button>
-            <button class="btn btn-light">Sign Up</button>
+          <?php
+            if(isset($_SESSION["userId"]))
+            {
+          ?>
+          <div div class="d-flex gap-2 align-items-center">
+            <div class="text-light"><?php echo $_SESSION["userUid"] ?></div>
+            <a class="nav-link text-light" href="includes/logout.inc.php">
+            <button class="btn btn-outline-danger">Logout</button></a>
           </div>
+          <?php
+            }
+            else
+            {
+          ?>
+          <div div class="d-flex gap-2">
+            <a class="nav-link text-light" href="#"><button class="btn btn-outline-light">Login</button></a>
+            <a class="nav-link text-light" href="#"><button class="btn btn-light">Signup</button></a>
+          </div>
+          <?php
+            }
+          ?>
         </div>
       </div>
     </nav>
@@ -62,7 +83,7 @@
             <div class="bg-dark text-light rounded p-3">
               <h4 class="text-center">Login</h4>
               <p>Already have an account? Log in here.</p>
-              <form action="login.inc.php" method="post">
+              <form action="includes/login.inc.php" method="post">
                 <div class="mb-3">
                   <input class="form-control w-100" type="text" name="uid" placeholder="Username">
                 </div>
