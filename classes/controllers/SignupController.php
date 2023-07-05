@@ -4,17 +4,17 @@ class SignupController extends Signup {
 
   private $uid;
   private $pwd;
-  private $pwdrepeat;
+  private $pwdRepeat;
   private $email;
 
-  public function __construct($uid, $pwd, $pwdrepeat, $email) {
+  public function __construct($uid, $pwd, $pwdRepeat, $email) {
     $this->uid = $uid;
     $this->pwd = $pwd;
-    $this->pwdrepeat = $pwdrepeat;
+    $this->pwdRepeat = $pwdRepeat;
     $this->email = $email;
   }
 
-  private function signupUser() {
+  public function signupUser() {
     if($this->emptyInput() == false) {
       // echo "Empty input!"
       header("location: ../index.php?error=emptyinput");
@@ -43,7 +43,7 @@ class SignupController extends Signup {
   private function emptyInput() {
     $result = true;
     
-    if(empty($this->uid) || empty($this->pwd) || empty($this->pwdrepeat) || empty($this->email)) {
+    if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
       $result = false;
     } else {
       $result = true;
@@ -79,7 +79,7 @@ class SignupController extends Signup {
   private function pwdMatch() {
     $result = true;
 
-    if($this->pwd !== $this->pwdrepeat) {
+    if($this->pwd !== $this->pwdRepeat) {
       $result = false;
     } else {
       $result = true;
