@@ -10,6 +10,7 @@ if(isset($_POST["submit"])) {
   $email = $_POST["email"];
 
   // instantiate SignupController
+  include "../classes/dbh.classes.php";
   include "../classes/models/Signup.php";
   include "../classes/controllers/SignupController.php";
 
